@@ -1,0 +1,17 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: test-annotations-cwcl
+spec:
+  selector: {}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+    spec:
+      containers:
+      - image: quay.io/tnevrlka-test/build-e2e-nabk-tenant/test-annotations-app-ljcd/test-annotations-cwcl@sha256:1e25e7eed1483b9e421e2dd87c2ebb005c996a6ef0c52d9a40a0a2ebee13780a
+        name: my-nginx
+        resources: {}
+status: {}

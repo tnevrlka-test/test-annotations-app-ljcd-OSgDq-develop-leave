@@ -1,0 +1,22 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: test-annotations-cwcl
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: test-annotations-cwcl
+    app.kubernetes.io/part-of: test-annotations-app-ljcd
+  name: test-annotations-cwclod5h
+spec:
+  port:
+    targetPort: 8081
+  tls:
+    insecureEdgeTerminationPolicy: Redirect
+    termination: edge
+  to:
+    kind: Service
+    name: test-annotations-cwcl
+    weight: 100
+status: {}
